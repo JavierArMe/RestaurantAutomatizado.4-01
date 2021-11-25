@@ -1,0 +1,545 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 25-11-2021 a las 06:40:50
+-- Versión del servidor: 10.4.21-MariaDB
+-- Versión de PHP: 8.0.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `restaurant`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `addplatillos`
+--
+
+CREATE TABLE `addplatillos` (
+  `idUsuario` int(11) NOT NULL,
+  `nombre` varchar(250) NOT NULL,
+  `cantidad` int(250) NOT NULL,
+  `precio` varchar(251) NOT NULL,
+  `estatus` varchar(250) NOT NULL,
+  `Mesa` int(11) NOT NULL,
+  `Fecha` varchar(250) NOT NULL,
+  `comensal` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `addplatillos`
+--
+
+INSERT INTO `addplatillos` (`idUsuario`, `nombre`, `cantidad`, `precio`, `estatus`, `Mesa`, `Fecha`, `comensal`) VALUES
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/14/2021, 5:18:11 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/14/2021, 5:46:05 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/14/2021, 5:46:09 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/14/2021, 5:47:27 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/14/2021, 5:48:06 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/14/2021, 5:48:10 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/14/2021, 5:48:16 PM', 1),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/14/2021, 6:50:55 PM', 2),
+(3, 'La mejor sopa de spagueti', 0, '60', 'ORDENADO', 1, '11/14/2021, 6:50:55 PM', 3),
+(4, 'Sopa Roja', 0, '50', 'ORDENADO', 1, '11/14/2021, 6:50:55 PM', 4),
+(5, 'Camarones en brocheta', 0, '90', 'ORDENADO', 1, '11/14/2021, 6:50:55 PM', 5),
+(6, 'Torta sencilla', 0, '50', 'ORDENADO', 1, '11/14/2021, 6:50:55 PM', 6),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/14/2021, 6:52:23 PM', 1),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/14/2021, 6:52:31 PM', 2),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/14/2021, 6:56:02 PM', 2),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/14/2021, 6:58:35 PM', 1),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/14/2021, 6:58:46 PM', 1),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/14/2021, 6:59:32 PM', 2),
+(3, 'La mejor sopa de spagueti', 0, '60', 'ORDENADO', 1, '11/14/2021, 6:59:38 PM', 3),
+(4, 'Sopa Roja', 0, '50', 'ORDENADO', 1, '11/14/2021, 6:59:46 PM', 4),
+(5, 'Camarones en brocheta', 0, '90', 'ORDENADO', 1, '11/14/2021, 6:59:57 PM', 5),
+(6, 'Torta sencilla', 0, '50', 'ORDENADO', 1, '11/14/2021, 7:00:06 PM', 6),
+(3, 'La mejor sopa de spagueti', 0, '60', 'ORDENADO', 1, '11/14/2021, 7:00:36 PM', 3),
+(3, 'La mejor sopa de spagueti', 0, '60', 'ORDENADO', 1, '11/14/2021, 7:01:48 PM', 3),
+(4, 'Sopa Roja', 0, '50', 'ORDENADO', 1, '11/14/2021, 7:01:58 PM', 4),
+(4, 'Sopa Roja', 0, '50', 'ORDENADO', 1, '11/14/2021, 7:02:07 PM', 4),
+(5, 'Camarones en brocheta', 0, '90', 'ORDENADO', 1, '11/14/2021, 7:02:17 PM', 5),
+(5, 'Camarones en brocheta', 0, '90', 'ORDENADO', 1, '11/14/2021, 7:02:27 PM', 5),
+(6, 'Torta sencilla', 0, '50', 'ORDENADO', 1, '11/14/2021, 7:02:34 PM', 6),
+(6, 'Torta sencilla', 0, '50', 'ORDENADO', 1, '11/14/2021, 7:02:40 PM', 6),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/14/2021, 7:25:20 PM', 1),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/14/2021, 7:25:20 PM', 2),
+(3, 'La mejor sopa de spagueti', 0, '60', 'ORDENADO', 1, '11/14/2021, 7:25:20 PM', 3),
+(4, 'Sopa Roja', 0, '50', 'ORDENADO', 1, '11/14/2021, 7:25:20 PM', 4),
+(5, 'Camarones en brocheta', 0, '90', 'ORDENADO', 1, '11/14/2021, 7:25:20 PM', 5),
+(6, 'Torta sencilla', 0, '50', 'ORDENADO', 1, '11/14/2021, 7:25:20 PM', 6),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/14/2021, 7:25:20 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/14/2021, 7:42:32 PM', 1),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/14/2021, 7:42:32 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 0, '11/19/2021, 6:21:22 PM', 0),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 1),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 1),
+(3, 'La mejor sopa de spagueti', 0, '60', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 1),
+(4, 'Sopa Roja', 0, '50', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 1),
+(5, 'Camarones en brocheta', 0, '90', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 1),
+(6, 'Torta sencilla', 0, '50', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 2),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 2),
+(3, 'La mejor sopa de spagueti', 0, '60', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 2),
+(4, 'Sopa Roja', 0, '50', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 2),
+(5, 'Camarones en brocheta', 0, '90', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 2),
+(6, 'Torta sencilla', 0, '50', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 2),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 3),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 3),
+(3, 'La mejor sopa de spagueti', 0, '60', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 3),
+(4, 'Sopa Roja', 0, '50', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 3),
+(5, 'Camarones en brocheta', 0, '90', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 3),
+(6, 'Torta sencilla', 0, '50', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 3),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 4),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 4),
+(3, 'La mejor sopa de spagueti', 0, '60', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 4),
+(4, 'Sopa Roja', 0, '50', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 4),
+(5, 'Camarones en brocheta', 0, '90', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 4),
+(6, 'Torta sencilla', 0, '50', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 4),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 5),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 5),
+(3, 'La mejor sopa de spagueti', 0, '60', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 5),
+(4, 'Sopa Roja', 0, '50', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 5),
+(5, 'Camarones en brocheta', 0, '90', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 5),
+(6, 'Torta sencilla', 0, '50', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 5),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 6),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 6),
+(3, 'La mejor sopa de spagueti', 0, '60', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 6),
+(4, 'Sopa Roja', 0, '50', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 6),
+(5, 'Camarones en brocheta', 0, '90', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 6),
+(6, 'Torta sencilla', 0, '50', 'ORDENADO', 1, '11/21/2021, 7:00:39 PM', 6),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/21/2021, 7:01:34 PM', 1),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/21/2021, 7:01:53 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/23/2021, 2:53:34 PM', 1),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/23/2021, 2:53:34 PM', 2),
+(3, 'La mejor sopa de spagueti', 0, '60', 'ORDENADO', 1, '11/23/2021, 2:53:34 PM', 3),
+(4, 'Sopa Roja', 0, '50', 'ORDENADO', 1, '11/23/2021, 2:53:34 PM', 4),
+(5, 'Camarones en brocheta', 0, '90', 'ORDENADO', 1, '11/23/2021, 2:53:34 PM', 5),
+(6, 'Torta sencilla', 0, '50', 'ORDENADO', 1, '11/23/2021, 2:53:34 PM', 6),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/23/2021, 2:55:53 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/23/2021, 2:57:26 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/23/2021, 2:58:31 PM', 1),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/23/2021, 2:58:31 PM', 1),
+(3, 'La mejor sopa de spagueti', 0, '60', 'ORDENADO', 1, '11/23/2021, 2:58:31 PM', 1),
+(6, 'Torta sencilla', 0, '50', 'ORDENADO', 1, '11/23/2021, 2:58:31 PM', 1),
+(5, 'Camarones en brocheta', 0, '90', 'ORDENADO', 1, '11/23/2021, 2:58:31 PM', 1),
+(4, 'Sopa Roja', 0, '50', 'ORDENADO', 1, '11/23/2021, 2:58:31 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/23/2021, 2:58:56 PM', 1),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/23/2021, 2:58:56 PM', 2),
+(3, 'La mejor sopa de spagueti', 0, '60', 'ORDENADO', 1, '11/23/2021, 2:58:56 PM', 3),
+(4, 'Sopa Roja', 0, '50', 'ORDENADO', 1, '11/23/2021, 2:58:56 PM', 4),
+(5, 'Camarones en brocheta', 0, '90', 'ORDENADO', 1, '11/23/2021, 2:58:56 PM', 5),
+(6, 'Torta sencilla', 0, '50', 'ORDENADO', 1, '11/23/2021, 2:58:56 PM', 6),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/23/2021, 2:59:44 PM', 2),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/23/2021, 3:02:14 PM', 1),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/23/2021, 3:02:14 PM', 2),
+(3, 'La mejor sopa de spagueti', 0, '60', 'ORDENADO', 1, '11/23/2021, 3:02:14 PM', 3),
+(4, 'Sopa Roja', 0, '50', 'ORDENADO', 1, '11/23/2021, 3:02:14 PM', 4),
+(5, 'Camarones en brocheta', 0, '90', 'ORDENADO', 1, '11/23/2021, 3:02:14 PM', 5),
+(6, 'Torta sencilla', 0, '50', 'ORDENADO', 1, '11/23/2021, 3:02:14 PM', 6),
+(4, 'Sopa Roja', 0, '50', 'ORDENADO', 1, '11/23/2021, 3:02:40 PM', 4),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/23/2021, 3:03:55 PM', 1),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/23/2021, 3:03:55 PM', 2),
+(3, 'La mejor sopa de spagueti', 0, '60', 'ORDENADO', 1, '11/23/2021, 3:03:55 PM', 3),
+(4, 'Sopa Roja', 0, '50', 'ORDENADO', 1, '11/23/2021, 3:03:55 PM', 4),
+(5, 'Camarones en brocheta', 0, '90', 'ORDENADO', 1, '11/23/2021, 3:03:55 PM', 5),
+(6, 'Torta sencilla', 0, '50', 'ORDENADO', 1, '11/23/2021, 3:03:55 PM', 6),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/24/2021, 4:53:38 PM', 1),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 1, '11/24/2021, 4:53:38 PM', 1),
+(3, 'La mejor sopa de spagueti', 0, '60', 'ORDENADO', 1, '11/24/2021, 4:53:38 PM', 1),
+(4, 'Sopa Roja', 0, '50', 'ORDENADO', 1, '11/24/2021, 4:53:38 PM', 1),
+(5, 'Camarones en brocheta', 0, '90', 'ORDENADO', 1, '11/24/2021, 4:53:38 PM', 1),
+(6, 'Torta sencilla', 0, '50', 'ORDENADO', 1, '11/24/2021, 4:53:38 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/24/2021, 6:14:16 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/24/2021, 6:14:16 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 2, '11/24/2021, 7:37:51 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 2, '11/24/2021, 7:55:56 PM', 1),
+(2, 'Albondigas las mejores', 0, '80', 'ORDENADO', 2, '11/24/2021, 7:55:56 PM', 2),
+(3, 'La mejor sopa de spagueti', 0, '60', 'ORDENADO', 2, '11/24/2021, 7:55:56 PM', 3),
+(4, 'Sopa Roja', 0, '50', 'ORDENADO', 2, '11/24/2021, 7:55:56 PM', 4),
+(5, 'Camarones en brocheta', 0, '90', 'ORDENADO', 2, '11/24/2021, 7:55:56 PM', 5),
+(6, 'Torta sencilla', 0, '50', 'ORDENADO', 2, '11/24/2021, 7:55:56 PM', 6),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/24/2021, 7:59:28 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/24/2021, 7:59:28 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 2, '11/24/2021, 8:05:02 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 2, '11/24/2021, 8:05:02 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 2, '11/24/2021, 8:09:12 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/24/2021, 8:12:15 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/24/2021, 8:12:15 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 1, '11/24/2021, 8:12:28 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 2, '11/24/2021, 10:02:43 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 2, '11/24/2021, 10:02:52 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 2, '11/24/2021, 10:02:58 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 3, '11/24/2021, 10:02:43 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 3, '11/24/2021, 10:03:21 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 3, '11/24/2021, 10:07:20 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'POR ORDENAR', 4, '11/24/2021, 10:15:36 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'POR ORDENAR', 4, '11/24/2021, 10:15:45 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'POR ORDENAR', 5, '11/24/2021, 10:20:55 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'POR ORDENAR', 5, '11/24/2021, 10:21:06 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 6, '11/24/2021, 10:26:02 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 6, '11/24/2021, 10:26:13 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 0, '25', 'ORDENADO', 6, '11/24/2021, 10:26:25 PM', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `mesas`
+--
+
+CREATE TABLE `mesas` (
+  `idmesa` int(11) NOT NULL,
+  `nombre` varchar(250) NOT NULL,
+  `telefono` int(10) NOT NULL,
+  `precio` int(250) NOT NULL,
+  `fecha` varchar(250) NOT NULL,
+  `fechafinal` varchar(250) NOT NULL,
+  `estatus` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `mesas`
+--
+
+INSERT INTO `mesas` (`idmesa`, `nombre`, `telefono`, `precio`, `fecha`, `fechafinal`, `estatus`) VALUES
+(1, ' ', 0, 250, '2021-11-04 16:15:30', '', 'FINALIZADO'),
+(2, ' ', 0, 250, '2021-11-03 19:50:22', '', 'FINALIZADO'),
+(3, ' ', 0, 250, '2021-11-03 19:50:22', '', 'FINALIZADO'),
+(4, ' ', 0, 250, '2021-11-04 14:50:19', '', 'FINALIZADO'),
+(5, ' ', 0, 250, '2021-11-03 19:50:23', '', 'FINALIZADO'),
+(6, ' ', 0, 250, '2021-11-03 19:50:24', '', 'FINALIZADO'),
+(1, 'joselito', 52369865, 250, '2021-11-19T17:43', '', 'FINALIZADO'),
+(1, 'manuel', 54634434, 250, '2021-11-19T18:43', '', 'FINALIZADO'),
+(1, 'joselito', 56325855, 250, '2021-11-19T18:00', '2021-11-19T18:03', 'FINALIZADO'),
+(1, 'manuel', 23659863, 250, '2021-11-19T18:05', '2021-11-19T18:07', 'FINALIZADO'),
+(1, 'manuel', 2147483647, 250, '2021-11-19T18:22', '2021-11-19T18:24', 'FINALIZADO'),
+(1, 'joselito', 23656986, 250, '2021-11-19T18:44', '2021-11-19T18:47', 'FINALIZADO'),
+(3, 'manuel', 2147483647, 250, '2021-11-19T18:44', '2021-11-19T18:47', 'FINALIZADO'),
+(5, 'juana', 2147483647, 250, '2021-11-19T18:45', '2021-11-19T18:47', 'FINALIZADO'),
+(2, 'aydan', 236578952, 250, '2021-11-19T18:45', '2021-11-19T18:47', 'FINALIZADO'),
+(4, 'marcos', 258369075, 250, '2021-11-19T18:45', '2021-11-19T18:47', 'FINALIZADO'),
+(6, 'salvador', 230598750, 250, '2021-11-19T18:46', '2021-11-19T18:47', 'FINALIZADO'),
+(1, 'jacinto', 32569875, 250, '2021-11-19T18:50', '2021-11-19T18:55', 'FINALIZADO'),
+(1, '', 0, 250, '', '', 'FINALIZADO'),
+(1, '', 0, 250, '', '', 'FINALIZADO'),
+(1, '', 0, 250, '', '', 'FINALIZADO'),
+(1, '', 0, 250, '', '', 'FINALIZADO'),
+(1, '', 0, 250, '', '', 'FINALIZADO'),
+(1, '', 0, 250, '', '', 'FINALIZADO'),
+(1, '', 0, 250, '', '', 'FINALIZADO'),
+(1, '', 0, 250, '', '', 'FINALIZADO'),
+(1, '', 0, 250, '', '', 'FINALIZADO'),
+(1, '', 0, 250, '', '', 'FINALIZADO'),
+(1, '', 0, 250, '', '', 'FINALIZADO'),
+(1, '', 0, 250, '', '', 'FINALIZADO'),
+(1, '', 0, 250, '', '', 'FINALIZADO'),
+(1, '', 0, 250, '', '', 'FINALIZADO'),
+(1, '', 0, 250, '', '', 'FINALIZADO'),
+(1, 'samed', 1, 250, '2021-11-21T14:45', '2021-11-21T14:47', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-21T15:52', '2021-11-21T15:53', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-21T18:23', '2021-11-21T18:24', 'FINALIZADO'),
+(1, 'samedongo', 65823652, 250, '2021-11-21T18:24', '2021-11-21T18:26', 'FINALIZADO'),
+(2, '', 0, 250, '', '', 'FINALIZADO'),
+(2, 'samed', 123456789, 250, '2021-11-21T18:48', '2021-11-21T18:49', 'FINALIZADO'),
+(3, 'samed', 123456789, 250, '2021-11-21T18:50', '2021-11-21T18:51', 'FINALIZADO'),
+(4, 'samed', 123456789, 250, '2021-11-21T18:52', '2021-11-21T18:54', 'FINALIZADO'),
+(5, 'samed', 123456789, 250, '2021-11-21T18:54', '2021-11-21T18:56', 'FINALIZADO'),
+(6, 'samed', 123456789, 250, '2021-11-21T18:56', '2021-11-21T18:57', 'FINALIZADO'),
+(1, 'Samed', 123456800, 250, '2021-11-23T15:07', '2021-11-23T15:09', 'FINALIZADO'),
+(1, 'Samed2', 123456800, 250, '2021-11-23T15:13', '2021-11-23T15:14', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:34', '2021-11-23T17:34', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:34', '2021-11-23T17:34', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samed', 123456789, 250, '2021-11-23T17:50', '2021-11-23T17:50', 'FINALIZADO'),
+(1, 'samedongo', 123456789, 250, '2021-11-23T18:27', '2021-11-23T18:27', 'FINALIZADO'),
+(1, 'samedongo', 123456789, 250, '2021-11-23T18:27', '2021-11-23T18:27', 'FINALIZADO'),
+(1, 'samedongo', 123456789, 250, '2021-11-23T18:27', '2021-11-23T18:27', 'FINALIZADO'),
+(1, 'SAMED', 2147483647, 250, '2021-11-23T19:01', '2021-11-23T19:02', 'FINALIZADO'),
+(2, 'SAMEDONGO', 2147483647, 250, '2021-11-23T19:02', '2021-11-23T19:04', 'FINALIZADO'),
+(3, 'SAMEDONGA', 2147483647, 250, '2021-11-23T19:03', '2021-11-23T19:04', 'FINALIZADO'),
+(1, 'SAMED', 1234567891, 250, '2021-11-23T19:05', '2021-11-23T19:06', 'FINALIZADO'),
+(2, 'SAMEDONGO', 1234567890, 250, '2021-11-23T19:05', '2021-11-23T19:06', 'FINALIZADO'),
+(3, 'SAMEDONGA', 1234567890, 250, '2021-11-23T19:06', '2021-11-23T19:07', 'FINALIZADO'),
+(4, 'SAMEDONGOS', 1234567890, 250, '2021-11-23T19:06', '2021-11-23T19:08', 'FINALIZADO'),
+(5, 'SAMEDONGAS', 1234567890, 250, '2021-11-23T19:06', '2021-11-23T19:08', 'FINALIZADO'),
+(6, 'SAME', 1234567890, 250, '2021-11-23T19:07', '2021-11-23T19:08', 'FINALIZADO'),
+(1, 'samed', 1234567891, 250, '2021-11-24T16:55', '2021-11-24T16:57', 'FINALIZADO');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `platillosordenados`
+--
+
+CREATE TABLE `platillosordenados` (
+  `idUsuario` int(11) NOT NULL,
+  `nombre` varchar(250) NOT NULL,
+  `cantidad` int(250) NOT NULL,
+  `precio` varchar(250) NOT NULL,
+  `estatus` varchar(250) NOT NULL,
+  `Mesa` int(11) NOT NULL,
+  `Fecha` varchar(250) NOT NULL,
+  `comensal` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `platillosordenados`
+--
+
+INSERT INTO `platillosordenados` (`idUsuario`, `nombre`, `cantidad`, `precio`, `estatus`, `Mesa`, `Fecha`, `comensal`) VALUES
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 1, '2021-11-02 14:44:08', 0),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 3, '2021-11-02 14:44:08', 0),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 5, '2021-11-02 14:44:09', 0),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 2, '2021-11-02 14:44:10', 0),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 4, '2021-11-02 14:44:11', 0),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 6, '2021-11-02 14:44:12', 0),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 1, '2021-11-02 17:33:12', 0),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 3, '2021-11-02 17:33:12', 0),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 5, '2021-11-02 17:33:13', 0),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 2, '2021-11-02 17:33:14', 0),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 4, '2021-11-02 17:33:15', 0),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 6, '2021-11-02 17:33:16', 0),
+(4, 'Sopa Roja', 2, '50', 'ORDEN TERMINADA', 2, '2021-11-02 22:53:12', 0),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 4, '2021-11-02 22:52:29', 0),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 6, '2021-11-02 22:53:30', 0),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 11, '25', 'ORDEN TERMINADA', 1, '2021-11-03 12:12:24', 0),
+(2, 'Albondigas las mejores', 2, '80', 'ORDEN TERMINADA', 1, '2021-11-03 12:12:24', 0),
+(3, 'La mejor sopa de spagueti', 2, '60', 'ORDEN TERMINADA', 1, '2021-11-03 12:12:25', 0),
+(4, 'Sopa Roja', 2, '50', 'ORDEN TERMINADA', 1, '2021-11-03 12:12:26', 0),
+(5, 'Camarones en brocheta', 2, '90', 'ORDEN TERMINADA', 1, '2021-11-03 12:12:27', 0),
+(6, 'Torta sencilla', 2, '50', 'ORDEN TERMINADA', 1, '2021-11-03 12:12:27', 0),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 18912, '25', 'ORDEN TERMINADA', 1, '2021-11-03 12:45:52', 0),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 1, '2021-11-03 13:51:56', 0),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 1, '2021-11-03 19:48:58', 0),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 3, '2021-11-03 19:49:06', 0),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 5, '2021-11-03 19:49:10', 0),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 2, '2021-11-03 19:49:03', 0),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 4, '2021-11-03 19:49:08', 0),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 6, '2021-11-03 19:49:13', 0),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '2021-11-04 14:08:28', 0),
+(5, 'Camarones en brocheta', 2, '90', 'ORDEN TERMINADA', 4, '2021-11-03 19:49:08', 0),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '2021-11-04 14:08:29', 0),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 5, '25', 'ORDEN TERMINADA', 4, '2021-11-04 14:48:21', 0),
+(2, 'Albondigas las mejores', 3, '80', 'ORDEN TERMINADA', 4, '2021-11-04 14:48:11', 0),
+(3, 'La mejor sopa de spagueti', 2, '60', 'ORDEN TERMINADA', 4, '2021-11-04 14:48:12', 0),
+(4, 'Sopa Roja', 2, '50', 'ORDEN TERMINADA', 4, '2021-11-04 14:48:13', 0),
+(5, 'Camarones en brocheta', 2, '90', 'ORDEN TERMINADA', 4, '2021-11-04 14:48:13', 0),
+(6, 'Torta sencilla', 2, '50', 'ORDEN TERMINADA', 4, '2021-11-04 14:48:14', 0),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 4, '25', 'ORDEN TERMINADA', 1, '2021-11-04 16:11:40', 0),
+(2, 'Albondigas las mejores', 2, '80', 'ORDEN TERMINADA', 1, '2021-11-04 16:11:41', 0),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '2021-11-04 16:11:42', 0),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 1, '2021-11-04 16:11:43', 0),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '2021-11-04 16:11:44', 0),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '2021-11-04 16:11:44', 0),
+(2, 'Albondigas las mejores', 80, 'POR ORDENAR', '1', 11, '2', 2),
+(2, 'Albondigas las mejores', 2, '80', 'ORDEN TERMINADA', 1, '11/14/2021, 6:50:55 PM', 2),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/14/2021, 6:50:55 PM', 2),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '11/14/2021, 6:50:55 PM', 3),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 1, '11/14/2021, 6:50:55 PM', 4),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '11/14/2021, 6:50:55 PM', 5),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '11/14/2021, 6:50:55 PM', 6),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/14/2021, 6:52:31 PM', 2),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/14/2021, 6:58:35 PM', 1),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/14/2021, 6:59:32 PM', 2),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '11/14/2021, 6:59:38 PM', 3),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 1, '11/14/2021, 6:59:46 PM', 4),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '11/14/2021, 6:59:57 PM', 5),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '11/14/2021, 7:00:06 PM', 6),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '11/14/2021, 7:01:48 PM', 3),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 1, '11/14/2021, 7:02:07 PM', 4),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '11/14/2021, 7:02:27 PM', 5),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '11/14/2021, 7:02:40 PM', 6),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 1),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 1),
+(2, 'Albondigas las mejores', 2, '80', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 2, '25', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 1),
+(2, 'Albondigas las mejores', 2, '80', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 2, '25', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 1),
+(2, 'Albondigas las mejores', 2, '80', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 1),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 3),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 2),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 2, '25', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 1),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 5),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 4),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 6),
+(2, 'Albondigas las mejores', 2, '80', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 1),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 2),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 2, '25', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 1),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 6),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 4),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 5),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 3),
+(2, 'Albondigas las mejores', 2, '80', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 2, '25', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 1),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 3),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 5),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 2),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 1, '11/14/2021, 7:25:20 PM', 4),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 1),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 1),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 1),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 1),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 1),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 2),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 2),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 2),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 2),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 2),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 2),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 4),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 3),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 4),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 3),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 4),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 3),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 3),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 4),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 3),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 4),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 3),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 4),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 6),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 6),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 6),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 6),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 6),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 6),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 5),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 5),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 5),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 5),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '11/21/2021, 7:00:39 PM', 5),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '11/23/2021, 2:53:34 PM', 3),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '11/23/2021, 2:53:34 PM', 5),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '11/23/2021, 2:53:34 PM', 6),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 1, '11/23/2021, 2:53:34 PM', 4),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/23/2021, 2:53:34 PM', 2),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 2, '25', 'ORDEN TERMINADA', 1, '11/23/2021, 2:53:34 PM', 1),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/23/2021, 2:53:34 PM', 2),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 2, '25', 'ORDEN TERMINADA', 1, '11/23/2021, 2:53:34 PM', 1),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '11/23/2021, 2:53:34 PM', 3),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '11/23/2021, 2:53:34 PM', 5),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '11/23/2021, 2:53:34 PM', 6),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 1, '11/23/2021, 2:57:26 PM', 1),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/23/2021, 2:58:31 PM', 1),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '11/23/2021, 2:58:31 PM', 1),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '11/23/2021, 2:58:31 PM', 1),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 1, '11/23/2021, 2:58:31 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 1, '11/23/2021, 2:58:31 PM', 1),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '11/23/2021, 2:58:31 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 1, '11/23/2021, 2:58:56 PM', 1),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '11/23/2021, 2:58:56 PM', 3),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 1, '11/23/2021, 2:58:56 PM', 4),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '11/23/2021, 2:58:56 PM', 5),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '11/23/2021, 2:58:56 PM', 6),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 1, '11/23/2021, 2:59:44 PM', 2),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 1, '11/23/2021, 3:02:14 PM', 1),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/23/2021, 3:02:14 PM', 2),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '11/23/2021, 3:02:14 PM', 3),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '11/23/2021, 3:02:14 PM', 5),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '11/23/2021, 3:02:14 PM', 6),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 1, '11/23/2021, 3:02:40 PM', 4),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 1, '11/23/2021, 3:03:55 PM', 1),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/23/2021, 3:03:55 PM', 2),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '11/23/2021, 3:03:55 PM', 3),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '11/23/2021, 3:03:55 PM', 5),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 1, '11/23/2021, 3:03:55 PM', 4),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '11/23/2021, 3:03:55 PM', 6),
+(2, 'Albondigas las mejores', 1, '80', 'ORDEN TERMINADA', 1, '11/24/2021, 4:53:38 PM', 1),
+(5, 'Camarones en brocheta', 1, '90', 'ORDEN TERMINADA', 1, '11/24/2021, 4:53:38 PM', 1),
+(3, 'La mejor sopa de spagueti', 1, '60', 'ORDEN TERMINADA', 1, '11/24/2021, 4:53:38 PM', 1),
+(4, 'Sopa Roja', 1, '50', 'ORDEN TERMINADA', 1, '11/24/2021, 4:53:38 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 1, '11/24/2021, 4:53:38 PM', 1),
+(6, 'Torta sencilla', 1, '50', 'ORDEN TERMINADA', 1, '11/24/2021, 4:53:38 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 2, '25', 'ORDEN TERMINADA', 1, '11/24/2021, 6:14:16 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 2, '11/24/2021, 7:37:51 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 2, '11/24/2021, 7:37:51 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 2, '11/24/2021, 7:37:51 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 2, '25', 'ORDEN TERMINADA', 1, '11/24/2021, 7:59:28 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 2, '25', 'ORDEN TERMINADA', 2, '11/24/2021, 8:05:02 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 2, '11/24/2021, 8:09:12 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 2, '25', 'ORDEN TERMINADA', 1, '11/24/2021, 8:12:15 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 1, '11/24/2021, 8:12:28 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 2, '11/24/2021, 10:02:43 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 3, '11/24/2021, 10:07:20 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 2, '25', 'ORDEN TERMINADA', 4, '11/24/2021, 10:15:36 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 2, '25', 'ORDEN TERMINADA', 5, '11/24/2021, 10:20:55 PM', 1),
+(1, 'Tacos de maiz (Los mejores tacos de carne asada)', 1, '25', 'ORDEN TERMINADA', 6, '11/24/2021, 10:26:02 PM', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `productos`
+--
+
+CREATE TABLE `productos` (
+  `idproducto` int(11) NOT NULL,
+  `pro_descripcion` text CHARACTER SET utf8 DEFAULT NULL,
+  `pro_unidad` int(2) DEFAULT NULL,
+  `pro_marca` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `pro_fcompra` date DEFAULT NULL,
+  `pro_pcompra` double(10,2) DEFAULT NULL,
+  `pro_pventa` double(10,2) DEFAULT NULL,
+  `pro_observaciones` text CHARACTER SET utf8 DEFAULT NULL,
+  `vigencia` int(1) DEFAULT NULL,
+  `creacion` datetime DEFAULT NULL,
+  `modificacion` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `productos`
+--
+ALTER TABLE `productos`
+  ADD PRIMARY KEY (`idproducto`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `productos`
+--
+ALTER TABLE `productos`
+  MODIFY `idproducto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
